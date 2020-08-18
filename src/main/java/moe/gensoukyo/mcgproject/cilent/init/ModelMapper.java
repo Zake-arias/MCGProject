@@ -109,6 +109,7 @@ public class ModelMapper {
         registerModel(ModItem.ITEM_GRC_2M);
         registerModel(ModItem.ITEM_GRH_2);
         registerModel(ModItem.ITEM_GRH_2M);
+        registerModel(ModItem.ITEM_TEST_SWORD);
 
         ModelLoader.setCustomStateMapper(ModBlock.KITUNEBI, new StateMap.Builder().ignore(BlockKitunebi.LIGHT).build());
 

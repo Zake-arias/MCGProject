@@ -6,7 +6,9 @@ import moe.gensoukyo.mcgproject.common.feature.musicplayer.ItemMusicPlayer;
 import moe.gensoukyo.mcgproject.common.item.*;
 import moe.gensoukyo.mcgproject.common.item.cart.*;
 import moe.gensoukyo.mcgproject.core.MCGProject;
+import net.minecraft.block.BlockStairs;
 import net.minecraft.item.Item;
+import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
@@ -36,6 +38,7 @@ public class ModItem {
     public static ItemLittleRock ITEM_LITTLE_STONE;
     public static ItemRouKanKen ITEM_ROU_KAN_KEN;
     public static ItemMCGHoe ITEM_MCG_HOE;
+    public static ItemTestSword ITEM_TEST_SWORD;
 
     public static ItemGRM3A ITEM_GRM_3A;
     public static ItemGRM3AF ITEM_GRM_3AF;
@@ -81,6 +84,7 @@ public class ModItem {
         ITEM_GRC_2M = new ItemGRC2M();
         ITEM_GRH_2 = new ItemGRH2();
         ITEM_GRH_2M = new ItemGRH2M();
+        ITEM_TEST_SWORD = new ItemTestSword();
 
         event.getRegistry().registerAll(ITEM_MCG_BOAT, ITEM_RAC_BOAT);
 
@@ -101,5 +105,14 @@ public class ModItem {
         event.getRegistry().registerAll(ITEM_GRC_2, ITEM_GRC_2M, ITEM_GRH_2, ITEM_GRH_2M);
 
         event.getRegistry().register(ITEM_MCG_HOE);
+
+        event.getRegistry().register(ITEM_TEST_SWORD);
     }
+    public static final Item.ToolMaterial TEST_MATERIAL = EnumHelper.addToolMaterial(
+            "test_materal",
+            3,
+            2000,
+            12.0F,
+            6.0F,
+            10);
 }
